@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+button 
+{
+  cursor: pointer;
+}
+body {
+  font-family: var(--global-font);
+  background-color: var(--body-bgcolor);
+  color: var(--global-color);
+  min-height: 200vh;
+}
+/* Flex */
+.flex {
+  display: flex;
+  align-items: center;
+}
+.flex.center {
+  justify-content: center;
+}
+.flex.start {
+  justify-content: flex-start;
+}
+.flex.end {
+  justify-content: flex-end;
+}
+.flex.space-between {
+  justify-content: space-between;
+}
+.flex.column {
+  flex-direction: column;
+}
+.flex.column-start {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.flex.column-end {
+  flex-direction: column;
+  align-items: flex-end;
+}
+/* Text - color */
+/* .main-title {
+
+} */
+.main-text {
+  color: #AAAAAA;
+}
+.bolder {
+  font-weight: 900;
+}
+.bold {
+  font-weight: 700;
+}
+.medium {
+  font-weight: 500;
+}
+.text-gold {
+  color: var(--gold-color);
+  font-family: var(--highlight-font);
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+/* Screens */
+.md-screen {
+  display: none;
+}
+.sm-screen {
+  display: none;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+/* Sections */
+.section-space {
+  padding: var(--section-space);
+}
+.section-title {
+  font-size: var(--section-title);
+}
+/* Contaienr */
+.container {
+  width: 1180px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+:root {
+  /* font -family */
+
+  --highlight-font: 'Cormorant Upright', serif;
+  --global-font: 'Open Sans', sans-serif;
+
+  /* Colors */
+
+  --body-bgcolor: #0c0c0c;
+  --global-color: #aaa;
+  --gold-color: #DCCA87;
+
+  /* spaces */
+
+  --section-space: 80px 0;
+
+  /* Fonts size */
+  --hero-title: 75px;
+  --section-title: 60px;
+
+}
+.spoon-icon {
+  width: 35px;
+  height: auto;
+}
+@media(max-width: 1199px) {
+  :root {
+    --hero-title: 60px;
+    --section-title: 50px;
+  }
+  .container {
+    width: 880px;
+    max-width: 90%;
+  }
+  .md-screen {
+    display: block;
+  }
+}
+@media(max-width: 767px) {
+  :root {
+    --hero-title: 45px;
+    --section-title: 35px;
+  }
+  .sm-screen {
+    display: block;
+  }
+  .container {
+    width: 560px;
+    max-width: 95%;
+  }
+}
+@media(max-width: 575px) {
+  img {
+    max-width: 100%;
+  }
+  .container {
+    max-width: 90%;
+  }
+}

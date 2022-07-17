@@ -1,0 +1,65 @@
+.chefs_container {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+  column-gap: 30px;
+  row-gap: 60px;
+}
+.single_chef .chef_img {
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--gold-color);
+  overflow: hidden;
+}
+.single_chef .chef_img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  transition: .3s linear;
+}
+.single_chef .chef_img:hover::after {
+  opacity: .4;
+}
+.single_chef img {
+  width: 100%;
+  object-fit: cover;
+  max-width: 100%;
+  display: block;
+  transition: 1s ease;
+}
+.single_chef:hover img {
+  transform: scale(1.05);
+}
+.chef_links {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  column-gap: 20px;
+  font-size: 24px;
+  color: #fff;
+  z-index: 1;
+  transition: .6s ease;
+}
+.single_chef:hover .chef_links {
+  transform: translate(-50%, -50%) scale(1);
+}
+.single_chef h3 {
+  color: #fff;
+  font-size: 32px;
+  margin: 30px 0 10px;
+  transition: .3s ease;
+}
+.single_chef:hover  h3 {
+  color: var(--gold-color);
+}
+.single_chef p {
+  transition: .3s ease;
+}
+.single_chef:hover p {
+  color: #fff;
+}

@@ -1,0 +1,181 @@
+.left__single_blog img {
+  width: 100%;
+}
+.single_blog_page_content {
+  column-gap: 30px;
+  align-items: flex-start !important;
+}
+.left__single_blog {
+  flex: 3;
+}
+.right__single_blog {
+  flex: 1;
+}
+/* Start col right */
+.card {
+  padding: 20px;
+  background-color: #242424;
+  margin-bottom: 30px;
+}
+.card h3 {
+  font-size: 28px;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+.tags_list,
+.posts__list,
+.right__single_blog .category__list {
+  row-gap: 20px;
+}
+.category__list button {
+  color: var(--global-color);
+  font-size: 18px;
+  font-weight: 400;
+}
+.post {
+  background-color: var(--body-bgcolor);
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+}
+.tags_list a {
+  color: var(--global-color);
+  font-size: 18px;
+}
+.tags_list a:hover {
+  color: var(--gold-color);
+}
+/* End col right */
+/* Start Left col */
+.blog_single_img {
+  margin-bottom: 40px;
+}
+.blog_single_img img {
+  display: block;
+  margin-bottom: 20px;
+}
+.blog_single_img > div {
+  color: #fff;
+  column-gap: 20px;
+  font-size: 16px;
+}
+.blog_single_img > div button {
+  text-transform: uppercase;
+  color: var(--gold-color);
+}
+span.col {
+  height: 2px;
+  width: 20px;
+  background-color: var(--global-color);
+  border-radius: 50px;
+}
+.left__single_blog > p {
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+.left__single_blog > h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.left__single_blog > h3 + p {
+  margin-bottom: 20px;
+}
+.left__single_blog .list {
+  row-gap: 10px;
+}
+.left__single_blog .list p {
+  position: relative;
+  padding-left: 30px;
+}
+.left__single_blog .list p::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  border-radius: 40px;
+  background-color: var(--gold-color);
+}
+/* End Left col */
+@media(max-width: 991px) {
+  .card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .tags_list a,
+  .post,
+  .category__list button {
+    font-size: 16px;
+  }
+  .post {
+    padding: 10px;
+  }
+}
+.comments {
+  width: 800px;
+  margin: 50px auto 0;
+  max-width: 100%;
+}
+.comments h3 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.comment {
+  padding: 20px;
+  border: 1px solid var(--gold-color);
+  margin-bottom: 24px;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+.comment .peron_name {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.comment p {
+  line-height: 28px;
+  color: #fff;  
+}
+.delete_comment {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: red;
+  font-size: 16px;
+  opacity: .5;
+}
+.delete_comment:hover {
+  opacity: 1;
+}
+.form__comment {
+  width: 100%;
+  border-top: 1px solid;
+  padding-top: 40px;
+  width: 600px;
+  max-width: 100%;
+}
+.form__comment > div {
+  row-gap: 8px;
+  margin-bottom: 20px;
+}
+.form__comment label {
+  font-size: 24px;
+}
+.form__comment textarea,
+.form__comment input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--gold-color);
+  width: 100%;
+  height: 50px;
+  color: #fff;
+}
+.form__comment textarea {
+  height: 80px;
+}
+@media(max-width: 767px) {
+  .right__single_blog {
+    display: none;
+  }
+}

@@ -1,0 +1,11 @@
+.error__page {
+  min-height: calc(100vh - 100px);
+  row-gap: 20px;
+}
+.error__page h3 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+.error__page img {
+  max-width: 100%;
+}

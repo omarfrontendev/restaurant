@@ -1,0 +1,48 @@
+.button {
+  padding: 10px 30px;
+  background-color: var(--body-bgcolor);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--highlight-font);
+  border: 1px solid var(--gold-color);
+  color: var(--gold-color);
+  transition: .3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+.button:hover {
+  color: var(--body-bgcolor);
+}
+.button::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-color: var(--gold-color);
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: .3s linear;
+}
+.button:hover::after {
+  transform: translateX(0);
+}
+.button.blur::after {
+  animation: hover2 .3s linear forwards;
+  transform: translateX(0%);
+  transition: none;
+}
+.button:disabled {
+  background-color: #ccc;
+  color: #000;
+  pointer-events: none;
+}
+@keyframes hover2 {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
